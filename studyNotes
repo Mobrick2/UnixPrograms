@@ -1,0 +1,3 @@
+charpter4:
+1.set-user-ID and set-group-ID can grant the access of "this file" to the "someone" who executes( or use) this "this file" to do something.
+This someone starts a process which related to "this file", and the owner of "this file" grant the access of the file to "this someone".
