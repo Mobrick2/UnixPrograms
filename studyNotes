@@ -1,3 +1,13 @@
 charpter4:
 1.set-user-ID and set-group-ID can grant the access of "this file" to the "someone" who executes( or use) this "this file" to do something.
 This someone starts a process which related to "this file", and the owner of "this file" grant the access of the file to "this someone".
+
+2. The read permission for the directory is to read the entry in the directory. And the execution permission for a directory is "searcheable"
+permission for a directory. If we don't have x permission for a dir, but if we have r permission, we can also read the entry in the dir.
+But we can't not "ls -l" the entries under this dir. Only we have 'x' and 'w' permission, we can create new files in the dir. 
+If the 'sticky bit' is set for the dir and the user has 'w' permission, only if the user satisfyies one of the following conditions
+• Owns the file
+• Owns the directory
+• Is the superuser
+Then the user can rename and delete the file in the dir.
+
