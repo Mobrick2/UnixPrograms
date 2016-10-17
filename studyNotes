@@ -11,3 +11,8 @@ If the 'sticky bit' is set for the dir and the user has 'w' permission, only if 
 • Is the superuser
 Then the user can rename and delete the file in the dir.
 
+charpter7:
+1. standard output is line buffered if it’s connected to a terminal device; otherwise, it’s fully buffered. So if we use fork() function,
+the output maybe different. See the example in textbook, firgure 8.1, change printf("before fork\n"); to printf("before fork:");, it will
+also print out the "before fork:" twice, since it doesn't flash out since there is no '\n'.
+
