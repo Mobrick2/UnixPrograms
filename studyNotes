@@ -1,4 +1,4 @@
-charpter4:
+chapter4:
 1.set-user-ID and set-group-ID can grant the access of "this file" to the "someone" who executes( or use) this "this file" to do something.
 This someone starts a process which related to "this file", and the owner of "this file" grant the access of the file to "this someone".
 
@@ -11,8 +11,14 @@ If the 'sticky bit' is set for the dir and the user has 'w' permission, only if 
 • Is the superuser
 Then the user can rename and delete the file in the dir.
 
-charpter7:
+chapter7:
 1. standard output is line buffered if it’s connected to a terminal device; otherwise, it’s fully buffered. So if we use fork() function,
 the output maybe different. See the example in textbook, firgure 8.1, change printf("before fork\n"); to printf("before fork:");, it will
 also print out the "before fork:" twice, since it doesn't flash out since there is no '\n'.
 
+chapter15:
+1. how to understand popen(pager, "w") and popen(pager, "r") ? So popen(pager, "w") means the thing put in the stdin is pass to the 'pipe'
+and popen(3) read the staff from the 'pipe' and apply the command in pager to the stuff, finally ouput the result to stdout, since 
+the output file discriptor equals to stdout. It seems like the stdout is never changed.
+popen(pager, "r") means that if the things put in the stdout, is pass to the 'pipe', the popen(3) will read staff from the 'pipe' and 
+apply the command in pager to the stuff, this time the result can not print out to the stdout.
